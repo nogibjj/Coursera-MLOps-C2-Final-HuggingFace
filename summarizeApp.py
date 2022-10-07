@@ -1,4 +1,4 @@
-from transformers import TFAutoModel
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 import gradio as gr
 
 
@@ -10,13 +10,15 @@ import gradio as gr
 #    revision="a4f8f3e",
 #)
 
-model = TFAutoModel.from_pretrained("summarizeApp", from_pt=True)
-
+#load model and tokenizer from disk
+model = AutoModelForSeq2SeqLM.from_pretrained("summarizeApp")
+tokenizer = AutoTokenizer.from_pretrained("summarizeApp")
 
 def predict(prompt):
-    summary = model(prompt)[0]["summary_text"]
-    return summary
-
+    input_ids = tokenizer.encode(prompt, return_tensors="pt")
+    outputs = model.generate(input_ids)
+    decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return decoded
 
 # create an interface for the model
 with gr.Interface(predict, "textbox", "text") as interface:
