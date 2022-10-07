@@ -1,3 +1,5 @@
+[![CI](https://github.com/nogibjj/Coursera-MLOps-C2-Final-HuggingFace/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Coursera-MLOps-C2-Final-HuggingFace/actions/workflows/cicd.yml)
+
 ## Tasks
 
 A. Modify Hello World
