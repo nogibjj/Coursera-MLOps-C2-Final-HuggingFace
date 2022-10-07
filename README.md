@@ -1,38 +1,22 @@
-[![CI](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml)
-[![Codespaces Prebuilds](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg)](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds)
+## Tasks
 
-## Template for MLOPs projects
+A. Modify Hello World
 
-Things included are:
+1.  Run the following Hugging Face and Gradio web application `helloApp` by using:
+`python helloApp.py`.
+2. Change this application to be a calculator that adds two numbers using the calculator function in my lib.
+i.e. `from mylib.calculator import add`
 
-* `Makefile`
+* Reflection Question:  Why does a web framework like Gradio help build machine learning solutions faster?
 
-* `Pytest`
+B. Run the `summarizeApp.py` by using `python summarizeApp.py` and paste the text found in `text.txt`.
 
-* `pandas`
+* Reflection Question:  Why is the model and model version specified?
 
-* `Pylint`
+C. On your own explore other Hugging Face models at https://huggingface.co/models and wire them into a Gradio application.
 
-* `Dockerfile`
-
-* `GitHub copilot`
-
-* `jupyter` and `ipython` 
-
-* Most common Python libraries for ML/DL and Hugging Face
-
-* `githubactions` 
-
-### Used in Following Projects
-
-Used as the base and customized in the following Duke MLOps and Applied Data Engineering Coursera Labs:
-
-* [MLOPs-C2-Lab1-CICD](https://github.com/nogibjj/Coursera-MLOPs-Foundations-Lab-1-CICD)
-* [MLOps-C2-Lab2-PokerSimulator](https://github.com/nogibjj/Coursera-MLOPs-Foundations-Lab-2-poker-simulator)
-* MLOps-C2-Final-HuggingFace
+* Reflection Question:  What applications could you quickly build?
 
 ### References
 
-* [Building Cloud Computing Solutions at Scale Specialization](https://www.coursera.org/specializations/building-cloud-computing-solutions-at-scale)
-* [Python, Bash and SQL Essentials for Data Engineering Specialization](https://www.coursera.org/learn/web-app-command-line-tools-for-data-engineering-duke)
-* [Coursera-Dockerfile](https://gist.github.com/noahgift/82a34d56f0a8f347865baaa685d5e98d)
+* [Coursera-MLOps-C2-Final-HuggingFace](https://github.com/nogibjj/Coursera-MLOps-C2-Final-HuggingFace)
