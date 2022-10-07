@@ -1,12 +1,17 @@
-from transformers import pipeline
+from transformers import TFAutoModel
 import gradio as gr
 
 
-model = pipeline(
-    "summarization",
-    model="sshleifer/distilbart-cnn-12-6",
-    revision="a4f8f3e",
-)
+#uncomment to download model
+#from transformers import pipeline
+#model = pipeline(
+#    "summarization",
+#    model="sshleifer/distilbart-cnn-12-6",
+#    revision="a4f8f3e",
+#)
+
+model = TFAutoModel.from_pretrained("summarizeApp", from_pt=True)
+
 
 def predict(prompt):
     summary = model(prompt)[0]["summary_text"]
