@@ -4,7 +4,8 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 model = AutoModelForSeq2SeqLM.from_pretrained("summarizeApp")
 tokenizer = AutoTokenizer.from_pretrained("summarizeApp")
-with open("text.txt", "r") as f:
+#open the file with utf-8 encoding
+with open("input.txt", encoding="utf-8") as f:
     text = f.read()
 
 input_ids = tokenizer.encode(text, return_tensors="pt")
